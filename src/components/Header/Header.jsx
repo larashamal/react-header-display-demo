@@ -1,11 +1,7 @@
 import PropTypes from "prop-types";
 
 export default function Header({ name }) {
-  return (
-    <header>
-      <h1 className="text-3xl">Hello {name}</h1>
-    </header>
-  );
+  return <h1 className="my-8 text-center text-3xl">Hello {name}</h1>;
 }
 
 Header.propTypes = {
