@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header name={name} />
-      <Form />
+      <Form setName={setName} />
     </>
   );
 }

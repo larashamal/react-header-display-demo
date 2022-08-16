@@ -1,9 +1,25 @@
-export default function Form() {
+import PropTypes from "prop-types";
+
+export default function Form({ setName }) {
+  // The event parameter is an object representing the event that was triggered.
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const submission = Object.fromEntries(new FormData(event.target));
-    console.log(submission);
+    // The event.target property returns the element that triggered the event.
+    const form = event.target;
+
+    const keyValuePairsUsingTheNameAttributesFromTheFormElements = new FormData(
+      form
+    );
+
+    // Turn the FormData object into an Object Literal with key-value pairs.
+    const submission = Object.fromEntries(
+      keyValuePairsUsingTheNameAttributesFromTheFormElements
+    );
+
+    setName(submission.name);
+
+    event.target.reset();
   };
 
   return (
@@ -33,3 +49,7 @@ export default function Form() {
     </form>
   );
 }
+
+Form.propTypes = {
+  setName: PropTypes.func.isRequired,
+};
