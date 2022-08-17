@@ -5,5 +5,6 @@ exports[`renders correctly 1`] = `
   className="my-8 text-center text-3xl"
 >
   Hello 
+  John Doe
 </h1>
 `;

@@ -4,12 +4,12 @@ import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 
 function App() {
-  const [name, setName] = useState("Mark");
+  const [inputName, setInputName] = useState("Mark");
 
   return (
     <>
-      <Header name={name} />
-      <Form setName={setName} />
+      <Header name={inputName} />
+      <Form setName={setInputName} />
     </>
   );
 }

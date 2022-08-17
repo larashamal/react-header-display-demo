@@ -17,7 +17,7 @@ export default function Form({ setName }) {
       keyValuePairsUsingTheNameAttributesFromTheFormElements
     );
 
-    setName(submission.name);
+    setName(submission.formName);
 
     event.target.reset();
   };
@@ -36,7 +36,7 @@ export default function Form({ setName }) {
           placeholder="Enter your name"
           id="name"
           className="rounded border pl-2"
-          name="name"
+          name="formName"
         />
       </div>
 
